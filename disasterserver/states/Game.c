@@ -1311,6 +1311,7 @@ bool game_state_handletcp(PeerData* v, Packet* packet)
 				//			break;
 				//		}
 				//	}
+			}
 
 			if(v->server->game.end <= 0 && v->plr.is_attacking)
 			{
