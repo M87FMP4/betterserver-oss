@@ -1302,7 +1302,15 @@ bool game_state_handletcp(PeerData* v, Packet* packet)
 			{
 				PacketRead(flags, packet, packet_read8, uint8_t);
 				v->plr.is_attacking = flags & PLAYER_ATTACKING;
-			}
+				//	if (v->server->game.map == 20) // Exception for a specific map
+				//	{
+				//	switch (v->exe_char) // Use it if your new exe has a long attack.
+				//	{
+				//		case EX_EXETIOR:
+				//			duration = 3000;
+				//			break;
+				//		}
+				//	}
 
 			if(v->server->game.end <= 0 && v->plr.is_attacking)
 			{
