@@ -363,7 +363,7 @@ bool practice_mode(Component* component)
 
 	MutexLock(server->state_lock);
 	{
-		if(server->state == ST_LOBBY && server_ingame(server) > 1)
+		if(server->state == ST_LOBBY && server_ingame(server) > 0)
 		{
 			if(!charselect_init(20, server))
 			{
